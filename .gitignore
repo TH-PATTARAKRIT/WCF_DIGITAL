@@ -1,0 +1,33 @@
+# Credentials and environment
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+
+# Evidence and real datasets
+*.pdf
+*.zip
+*.xlsx
+*.xls
+*.docx
+*.csv
+raw/
+normalized/
+evidence/
+exports/
+
+# Local outputs
+output/
+outputs/
+reports/generated/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Allow controlled text templates and masked CSV schemas
+!templates/*.csv
+!examples/masked/*.csv
