@@ -1,0 +1,56 @@
+report_code: ACC5030
+current_version_pointer: PRACC5030001_v1.0.0
+documents:
+  - document_id: ACC5030001
+    version: 1.0.0
+    path: ACC_Report/ACC5030/prompts/ACC5030001_v1.0.0.md
+    previous_version_id: NONE
+    previous_commit_sha: NONE
+    derived_from: BOSS_AUTHORIZED_AUTOMATION_PILOT
+    status: FAILED_TECHNICAL_ATTEMPT
+    failure_reason: UNSUPPORTED_PUSH_EVENT
+    current_version: false
+    commit_sha: f237e438e9c74274e1e012826507e70b3e3cbb61
+
+  - document_id: ACC5030001
+    version: 1.0.1
+    path: ACC_Report/ACC5030/prompts/ACC5030001_v1.0.1.md
+    previous_version_id: ACC5030001_v1.0.0
+    previous_commit_sha: f237e438e9c74274e1e012826507e70b3e3cbb61
+    derived_from: WORKFLOW_PUBLICATION_FIX_10a7e4f20c0a289a156d71e1293f15d1c972d492
+    status: FAILED_TECHNICAL_ATTEMPT
+    failure_reason: UNTRUSTED_GITHUB_ACTIONS_BOT
+    current_version: false
+    commit_sha: bc54eaa0e305e2dc824dbc31368bee3b0230eba4
+
+  - document_id: ACC5030001
+    version: 1.0.2
+    path: ACC_Report/ACC5030/prompts/ACC5030001_v1.0.2.md
+    previous_version_id: ACC5030001_v1.0.1
+    previous_commit_sha: bc54eaa0e305e2dc824dbc31368bee3b0230eba4
+    derived_from: WORKFLOW_TRUSTED_BOT_FIX_b998af12926f53d02b62ae3deb1daa37971872d1
+    status: EXECUTED
+    current_version: true
+    commit_sha: 5684c8f5a5e25cfdbe060444f7a64c19845c21c7
+
+  - document_id: VSACC5030001
+    version: 1.0.2
+    path: ACC_Report/ACC5030/results/VSACC5030001_v1.0.2.md
+    previous_version_id: NONE
+    previous_commit_sha: 5684c8f5a5e25cfdbe060444f7a64c19845c21c7
+    derived_from: ACC5030001_v1.0.2
+    status: REVIEWED
+    current_version: true
+    commit_sha: PUBLISHED_BY_GITHUB_ACTIONS
+
+  - document_id: PRACC5030001
+    version: 1.0.0
+    path: ACC_Report/ACC5030/reviews/PRACC5030001_v1.0.0.md
+    previous_version_id: NONE
+    previous_commit_sha: PUBLISHED_BY_GITHUB_ACTIONS
+    derived_from:
+      - ACC5030001_v1.0.2
+      - VSACC5030001_v1.0.2
+    status: ACCEPTED_FOR_NEXT_AUTOMATION_STAGE
+    current_version: true
+    commit_sha: 437b9c1e59e383f5ea2fc761f1d711d268450f5a

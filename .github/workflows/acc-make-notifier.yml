@@ -1,0 +1,171 @@
+name: ACC Make Notifier
+
+on:
+  push:
+    branches:
+      - ACC_REPORT
+    paths:
+      - "ACC_Report/ACC*/results/VSACC*.md"
+  workflow_dispatch:
+    inputs:
+      result_path:
+        description: "Published VSACC path, for example ACC_Report/ACC5030/results/VSACC5030001_v1.0.2.md"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: acc-make-notifier-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  notify-make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout ACC_REPORT
+        uses: actions/checkout@v4
+        with:
+          ref: ACC_REPORT
+          fetch-depth: 0
+
+      - name: Resolve and validate published VSACC result
+        id: resolve
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+          MANUAL_RESULT_PATH: ${{ inputs.result_path }}
+        run: |
+          set -euo pipefail
+
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            RESULT_PATH="$MANUAL_RESULT_PATH"
+            SOURCE_COMMIT="$(git rev-parse HEAD)"
+          else
+            mapfile -t RESULT_FILES < <(
+              git diff --name-only --diff-filter=A "$BEFORE_SHA" "$AFTER_SHA" \
+                | grep -E '^ACC_Report/ACC[0-9]{4}/results/VSACC[0-9]{7}(_v[0-9]+\.[0-9]+\.[0-9]+)?\.md$' \
+                || true
+            )
+
+            if [[ "${#RESULT_FILES[@]}" -ne 1 ]]; then
+              echo "Exactly one newly added VSACC result is required; found ${#RESULT_FILES[@]}."
+              exit 1
+            fi
+
+            RESULT_PATH="${RESULT_FILES[0]}"
+            SOURCE_COMMIT="$AFTER_SHA"
+          fi
+
+          if [[ ! -f "$RESULT_PATH" ]]; then
+            echo "Result file does not exist: $RESULT_PATH"
+            exit 1
+          fi
+
+          if [[ ! "$RESULT_PATH" =~ ^ACC_Report/(ACC[0-9]{4})/results/(VSACC([0-9]{4})([0-9]{3}))(_v([0-9]+\.[0-9]+\.[0-9]+))?\.md$ ]]; then
+            echo "Result path violates the VSACC naming standard: $RESULT_PATH"
+            exit 1
+          fi
+
+          REPORT_CODE="${BASH_REMATCH[1]}"
+          RESULT_ID="${BASH_REMATCH[2]}"
+          RESULT_REPORT_DIGITS="${BASH_REMATCH[3]}"
+          SEQUENCE="${BASH_REMATCH[4]}"
+          VERSION="${BASH_REMATCH[6]:-UNVERSIONED}"
+
+          if [[ "$REPORT_CODE" != "ACC${RESULT_REPORT_DIGITS}" ]]; then
+            echo "Result ID $RESULT_ID does not match report folder $REPORT_CODE."
+            exit 1
+          fi
+
+          IDEMPOTENCY_KEY="${REPORT_CODE}-${SEQUENCE}-${SOURCE_COMMIT}"
+
+          echo "result_path=$RESULT_PATH" >> "$GITHUB_OUTPUT"
+          echo "report_code=$REPORT_CODE" >> "$GITHUB_OUTPUT"
+          echo "result_id=$RESULT_ID" >> "$GITHUB_OUTPUT"
+          echo "sequence=$SEQUENCE" >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "source_commit=$SOURCE_COMMIT" >> "$GITHUB_OUTPUT"
+          echo "idempotency_key=$IDEMPOTENCY_KEY" >> "$GITHUB_OUTPUT"
+
+      - name: Build controlled Make payload
+        shell: bash
+        env:
+          RESULT_PATH: ${{ steps.resolve.outputs.result_path }}
+          REPORT_CODE: ${{ steps.resolve.outputs.report_code }}
+          RESULT_ID: ${{ steps.resolve.outputs.result_id }}
+          SEQUENCE: ${{ steps.resolve.outputs.sequence }}
+          VERSION: ${{ steps.resolve.outputs.version }}
+          SOURCE_COMMIT: ${{ steps.resolve.outputs.source_commit }}
+          IDEMPOTENCY_KEY: ${{ steps.resolve.outputs.idempotency_key }}
+        run: |
+          set -euo pipefail
+
+          jq -n \
+            --arg event_type "VSACC_PUBLISHED" \
+            --arg repository "${{ github.repository }}" \
+            --arg branch "ACC_REPORT" \
+            --arg report_code "$REPORT_CODE" \
+            --arg result_id "$RESULT_ID" \
+            --arg sequence "$SEQUENCE" \
+            --arg version "$VERSION" \
+            --arg result_path "$RESULT_PATH" \
+            --arg source_commit "$SOURCE_COMMIT" \
+            --arg idempotency_key "$IDEMPOTENCY_KEY" \
+            --arg actor "${{ github.actor }}" \
+            --arg occurred_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            --rawfile result_markdown "$RESULT_PATH" \
+            '{
+              schema_version: "1.0.0",
+              event_type: $event_type,
+              repository: $repository,
+              branch: $branch,
+              report_code: $report_code,
+              result_id: $result_id,
+              sequence: $sequence,
+              version: $version,
+              result_path: $result_path,
+              source_commit: $source_commit,
+              idempotency_key: $idempotency_key,
+              actor: $actor,
+              occurred_at: $occurred_at,
+              result_markdown: $result_markdown,
+              controls: {
+                merge_authorized: false,
+                jira_close_authorized: false,
+                production_ready: false,
+                boss_final_decision: "PENDING"
+              }
+            }' > make-payload.json
+
+          jq '{event_type, report_code, result_id, sequence, version, result_path, source_commit, idempotency_key}' make-payload.json
+
+      - name: Send published VSACC to Make
+        shell: bash
+        env:
+          MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
+          IDEMPOTENCY_KEY: ${{ steps.resolve.outputs.idempotency_key }}
+        run: |
+          set -euo pipefail
+
+          if [[ -z "$MAKE_WEBHOOK_URL" ]]; then
+            echo "Repository secret MAKE_WEBHOOK_URL is not configured."
+            exit 1
+          fi
+
+          curl --fail-with-body --silent --show-error \
+            --retry 3 \
+            --retry-all-errors \
+            --connect-timeout 15 \
+            --max-time 60 \
+            -X POST "$MAKE_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -H "X-WCF-Idempotency-Key: $IDEMPOTENCY_KEY" \
+            --data-binary @make-payload.json
+
+          echo "Make notification delivered for $IDEMPOTENCY_KEY"
