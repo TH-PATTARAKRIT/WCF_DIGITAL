@@ -1,0 +1,14 @@
+report_code: ACCxxxx
+current_version_pointer: NONE
+documents: []
+required_fields:
+  - document_id
+  - document_version
+  - previous_version_id
+  - previous_commit_sha
+  - derived_from
+  - supersedes
+  - change_reason
+  - change_summary
+  - current_version
+  - commit_sha

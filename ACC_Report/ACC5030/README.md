@@ -1,13 +1,8 @@
-# ACC5030 — สมุดรายวันรับเงิน
+# ACC5030 Controlled Workspace
 
-Controlled workspace for report ACC5030.
+Pilot report workspace.
+Google Drive: https://drive.google.com/drive/folders/1KRI_Vrnf7L5RNj2odU0XW-tzsrd0Djvu
 
-## Structure
-
-- `control/` — session state and governance records
-- `prompts/` — controlled execution prompts
-- `WCF/` — WCF evidence files
-- `WCFLEGACY/` — WCFLEGACY evidence files
-- `WCF.zip` and `WCFLEGACY.zip` — packaged source evidence
-
-Current status: `PARTIALLY COMPLETE / CONTROLLED RECHECK REQUIRED`.
+Mirrored evidence pointers: WCF, WCFLEGACY, WCFUAT and REPORT_STATUS.
+Controlled prompts and session records remain under `prompts/` and `control/`.
+Raw PDFs and ZIP files must not be stored in this public repository.
