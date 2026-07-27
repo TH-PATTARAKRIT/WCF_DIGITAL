@@ -94,7 +94,6 @@ jobs:
           echo "idempotency_key=$IDEMPOTENCY_KEY" >> "$GITHUB_OUTPUT"
 
       - name: Build controlled Make payload
-        id: payload
         shell: bash
         env:
           RESULT_PATH: ${{ steps.resolve.outputs.result_path }}
@@ -150,18 +149,12 @@ jobs:
         shell: bash
         env:
           MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
-          MAKE_WEBHOOK_API_KEY: ${{ secrets.MAKE_WEBHOOK_API_KEY }}
           IDEMPOTENCY_KEY: ${{ steps.resolve.outputs.idempotency_key }}
         run: |
           set -euo pipefail
 
           if [[ -z "$MAKE_WEBHOOK_URL" ]]; then
             echo "Repository secret MAKE_WEBHOOK_URL is not configured."
-            exit 1
-          fi
-
-          if [[ -z "$MAKE_WEBHOOK_API_KEY" ]]; then
-            echo "Repository secret MAKE_WEBHOOK_API_KEY is not configured."
             exit 1
           fi
 
@@ -172,7 +165,6 @@ jobs:
             --max-time 60 \
             -X POST "$MAKE_WEBHOOK_URL" \
             -H "Content-Type: application/json" \
-            -H "x-make-apikey: $MAKE_WEBHOOK_API_KEY" \
             -H "X-WCF-Idempotency-Key: $IDEMPOTENCY_KEY" \
             --data-binary @make-payload.json
 
