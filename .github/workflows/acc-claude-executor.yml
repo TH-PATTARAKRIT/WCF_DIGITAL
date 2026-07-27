@@ -152,6 +152,7 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          allowed_bots: "github-actions[bot]"
           base_branch: ACC_REPORT
           prompt: ${{ steps.resolve.outputs.task }}
           claude_args: |
