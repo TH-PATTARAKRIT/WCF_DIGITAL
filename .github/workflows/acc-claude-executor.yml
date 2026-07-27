@@ -1,0 +1,130 @@
+name: ACC Claude Executor
+
+on:
+  push:
+    branches:
+      - ACC_REPORT
+    paths:
+      - "ACC_Report/ACC*/prompts/ACC*.md"
+  workflow_dispatch:
+    inputs:
+      prompt_path:
+        description: "Controlled prompt path, for example ACC_Report/ACC5030/prompts/ACC5030001_v1.0.0.md"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  actions: read
+
+concurrency:
+  group: acc-claude-executor-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  execute-controlled-prompt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout ACC_REPORT
+        uses: actions/checkout@v4
+        with:
+          ref: ACC_REPORT
+          fetch-depth: 0
+
+      - name: Resolve and validate controlled prompt
+        id: resolve
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+          MANUAL_PROMPT_PATH: ${{ inputs.prompt_path }}
+        run: |
+          set -euo pipefail
+
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            PROMPT_PATH="$MANUAL_PROMPT_PATH"
+          else
+            mapfile -t PROMPT_FILES < <(
+              git diff --name-only --diff-filter=A "$BEFORE_SHA" "$AFTER_SHA" \
+                | grep -E '^ACC_Report/ACC[0-9]{4}/prompts/ACC[0-9]{7}(_v[0-9]+\.[0-9]+\.[0-9]+)?\.md$' \
+                || true
+            )
+
+            if [[ "${#PROMPT_FILES[@]}" -ne 1 ]]; then
+              echo "Exactly one newly added controlled prompt is required; found ${#PROMPT_FILES[@]}."
+              exit 1
+            fi
+
+            PROMPT_PATH="${PROMPT_FILES[0]}"
+          fi
+
+          if [[ ! -f "$PROMPT_PATH" ]]; then
+            echo "Prompt file does not exist: $PROMPT_PATH"
+            exit 1
+          fi
+
+          if [[ ! "$PROMPT_PATH" =~ ^ACC_Report/(ACC[0-9]{4})/prompts/(ACC[0-9]{7})(_v[0-9]+\.[0-9]+\.[0-9]+)?\.md$ ]]; then
+            echo "Prompt path violates the ACC naming standard: $PROMPT_PATH"
+            exit 1
+          fi
+
+          REPORT_CODE="${BASH_REMATCH[1]}"
+          PROMPT_ID="${BASH_REMATCH[2]}"
+          VERSION_SUFFIX="${BASH_REMATCH[3]:-}"
+
+          if [[ "${PROMPT_ID:0:7}" != "$REPORT_CODE" ]]; then
+            echo "Prompt ID $PROMPT_ID does not match report folder $REPORT_CODE."
+            exit 1
+          fi
+
+          RESULT_ID="VS${PROMPT_ID}"
+          RESULT_PATH="ACC_Report/${REPORT_CODE}/results/${RESULT_ID}${VERSION_SUFFIX}.md"
+
+          if [[ -e "$RESULT_PATH" ]]; then
+            echo "Result already exists and must not be overwritten: $RESULT_PATH"
+            exit 1
+          fi
+
+          DELIMITER="ACC_PROMPT_$(date +%s)_${RANDOM}"
+          {
+            echo "task<<${DELIMITER}"
+            cat "$PROMPT_PATH"
+            echo
+            echo "## MANDATORY EXECUTION CONTROL"
+            echo "- Repository: ${{ github.repository }}"
+            echo "- Working branch: ACC_REPORT"
+            echo "- Source prompt path: ${PROMPT_PATH}"
+            echo "- Source Prompt ID: ${PROMPT_ID}"
+            echo "- Required Result ID: ${RESULT_ID}"
+            echo "- Required result path: ${RESULT_PATH}"
+            echo "- Create the result file at the exact required path."
+            echo "- Do not overwrite any existing Prompt, Result or Review file."
+            echo "- Do not create the next ACC prompt; only the independent reviewer may do that."
+            echo "- Do not merge a pull request, close Jira, or declare Production Ready."
+            echo "- Do not commit raw WCF, WCFUAT or WCFLEGACY evidence, credentials, tokens or identifiable records."
+            echo "- Use Google Drive pointers and sanitized metadata only."
+            echo "- Stop and report EVIDENCE_REQUIRED or BOSS_DECISION_REQUIRED when appropriate."
+            echo "- The result must identify files created/modified, validation performed, findings, blockers, commit context and requested reviewer decision."
+            echo "${DELIMITER}"
+          } >> "$GITHUB_OUTPUT"
+
+          echo "prompt_path=$PROMPT_PATH" >> "$GITHUB_OUTPUT"
+          echo "prompt_id=$PROMPT_ID" >> "$GITHUB_OUTPUT"
+          echo "result_id=$RESULT_ID" >> "$GITHUB_OUTPUT"
+          echo "result_path=$RESULT_PATH" >> "$GITHUB_OUTPUT"
+
+      - name: Execute Claude Code
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          base_branch: ACC_REPORT
+          prompt: ${{ steps.resolve.outputs.task }}
+          claude_args: |
+            --max-turns 12
+            --allowedTools "Read,Write,Edit"

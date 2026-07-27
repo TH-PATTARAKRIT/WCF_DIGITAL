@@ -1,0 +1,27 @@
+document_id: WCF-DRIVE-CLONE-001
+document_version: 1.0.0
+source_google_drive: https://drive.google.com/drive/folders/1fwc4S0zlkWRVq5qYiPqU6HWPLGz2lwaq
+target_repository: TH-PATTARAKRIT/WCF_DIGITAL
+target_branch: ACC_REPORT
+sync_date: 2026-07-27
+mode: STRUCTURE_AND_POINTERS_ONLY
+raw_evidence_copied: false
+report_count: 13
+reports:
+  - ACC5001
+  - ACC5002
+  - ACC5003
+  - ACC5013
+  - ACC5022
+  - ACC5023
+  - ACC5030
+  - ACC5031
+  - ACC5034
+  - ACC5042
+  - ACC5052
+  - ACC5053
+  - ACC5054
+exceptions:
+  - report: ACC5042
+    issue: DUPLICATE_WCFUAT_FOLDERS
+    status: REVIEW_REQUIRED
