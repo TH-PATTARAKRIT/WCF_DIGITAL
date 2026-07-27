@@ -150,7 +150,7 @@ jobs:
         shell: bash
         env:
           MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
-          MAKE_WEBHOOK_SECRET: ${{ secrets.MAKE_WEBHOOK_SECRET }}
+          MAKE_WEBHOOK_API_KEY: ${{ secrets.MAKE_WEBHOOK_API_KEY }}
           IDEMPOTENCY_KEY: ${{ steps.resolve.outputs.idempotency_key }}
         run: |
           set -euo pipefail
@@ -160,8 +160,8 @@ jobs:
             exit 1
           fi
 
-          if [[ -z "$MAKE_WEBHOOK_SECRET" ]]; then
-            echo "Repository secret MAKE_WEBHOOK_SECRET is not configured."
+          if [[ -z "$MAKE_WEBHOOK_API_KEY" ]]; then
+            echo "Repository secret MAKE_WEBHOOK_API_KEY is not configured."
             exit 1
           fi
 
@@ -172,7 +172,7 @@ jobs:
             --max-time 60 \
             -X POST "$MAKE_WEBHOOK_URL" \
             -H "Content-Type: application/json" \
-            -H "X-WCF-Webhook-Secret: $MAKE_WEBHOOK_SECRET" \
+            -H "x-make-apikey: $MAKE_WEBHOOK_API_KEY" \
             -H "X-WCF-Idempotency-Key: $IDEMPOTENCY_KEY" \
             --data-binary @make-payload.json
 
