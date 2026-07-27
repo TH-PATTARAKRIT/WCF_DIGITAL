@@ -131,7 +131,7 @@ jobs:
             echo "- Source Prompt ID: ${PROMPT_ID}"
             echo "- Required Result ID: ${RESULT_ID}"
             echo "- Required result path: ${RESULT_PATH}"
-            echo "- Create the result file at the exact required path."
+            echo "- You must use the Write tool to create the result file at the exact required path; a text-only response is not sufficient."
             echo "- Do not overwrite any existing Prompt, Result or Review file."
             echo "- Do not create the next ACC prompt; only the independent reviewer may do that."
             echo "- Do not merge a pull request, close Jira, or declare Production Ready."
@@ -156,4 +156,35 @@ jobs:
           prompt: ${{ steps.resolve.outputs.task }}
           claude_args: |
             --max-turns 12
-            --allowedTools "Read,Write,Edit"
+            --allowedTools "Read,Write,Edit,Bash(git:*)"
+
+      - name: Verify and publish VSACC result
+        shell: bash
+        env:
+          RESULT_PATH: ${{ steps.resolve.outputs.result_path }}
+          RESULT_ID: ${{ steps.resolve.outputs.result_id }}
+        run: |
+          set -euo pipefail
+
+          if [[ ! -f "$RESULT_PATH" ]]; then
+            echo "Claude execution completed but required result file was not created: $RESULT_PATH"
+            exit 1
+          fi
+
+          git config user.name "wcf-claude-executor[bot]"
+          git config user.email "wcf-claude-executor[bot]@users.noreply.github.com"
+
+          if git diff --quiet -- "$RESULT_PATH" && git diff --cached --quiet -- "$RESULT_PATH"; then
+            if git ls-files --error-unmatch "$RESULT_PATH" >/dev/null 2>&1; then
+              echo "Result file already tracked in the current commit."
+            else
+              echo "Result file exists but is not tracked and has no detectable change."
+              exit 1
+            fi
+          else
+            git add "$RESULT_PATH"
+            git commit -m "[${RESULT_ID}] add Claude execution result"
+            git push origin HEAD:ACC_REPORT
+          fi
+
+          echo "Published controlled result: $RESULT_PATH"
