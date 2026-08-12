@@ -3,7 +3,7 @@
 Date: 2026-08-12
 Source Session: [WCF-26-08-12-006]
 Carry Forward: 100% — NO RESET
-Status: ACTIVE
+Status: ACTIVE / FINAL GATE WAITING FOR BOSS DECISION
 
 ## Locked Carry-Forward Baseline
 - ORIGINAL_DEEP_PROOF_BASELINE_R2 remains active.
@@ -140,20 +140,73 @@ The unsupported values above are removed from the official carry-forward summary
 - Pilot READY is a prior-session gate result, but Session 007 governance still holds PILOT from advancing until Whole-WCF Truth Baseline conditions and Boss/Gate control are satisfied.
 - Whole-WCF scope must be re-baselined around the evidence-backed 328-component decision question rather than AUTO01–36 alone.
 
+## Session 007 — Recovery / Resume / Final Gate Result
+Boss supplied the Last Prompt result screenshot after Recovery → Resume → Final Gate L99.99 execution.
+
+### Recovery Outcome
+- PID 1772 had not failed.
+- It exited with code `0` and wrote both outputs at 12:34.
+- The previously observed zero-byte output and missing JSON were observed 48 seconds into a 93-second job.
+- No process was killed.
+- No scan was restarted.
+- No census was overwritten.
+- Validation of the completed output exposed one real defect: it matched only one runtime log shape.
+- A second additive pass found three more shapes and produced the session's largest evidence gain.
+
+### Whole-WCF Final Control Status
+- Whole-WCF denominator: `VERIFIED & CORRECTED` → 290 work units / 138 executable units / 97 census elements / 10 levels / 14 counting rules.
+- 328 components: `CORRECTED` → 56 of 58 jars started by a launcher, so jars + launchers counted those 56 twice.
+- 79 accounting items: 38 DIRECT / 23 INDIRECT / 24 dormant-producer / 28 manual-by-design / 45 another SSO bureau / 5 TRUE ORPHAN.
+- 58 orphan steps: 1 TRUE ORPHAN + 57 MAPPING_GAP; technically resolved, business question remains open.
+- Process traceability: forward `14/21 (66.7%)`; reverse `11/21 (52.4%)`.
+- Accounting traceability: producer/owner named `159/164 (97.0%)`; runtime `53/164`; DIRECT `38/164`.
+- Report traceability: specification `45/45`; ORIGINAL renderer `2/45 (4.4%)`.
+- Automation: coverage `100%`; AUTO share `41.4% (120/290)`.
+- Broken / Dormant: 8 defects / 16 dormant work units.
+- Performance ≥40%: `NOT YET PROVEN` — no host specification exists, so the KPI is unfalsifiable.
+- V3 R&D: 16 requirements / 3 options (Option A `63/70`) / 7 rejected / 12 POCs / nothing locked.
+- Pilot / Replatform: Pilot A `66.7% (6.0/9)`; Pilot B `60.0%`; Replatform `20.8% (2.5/12)`.
+- External expert: `NOT REVIEWED`.
+- AUDIT / AUDIT-VETO: 9 verdicts (1 reframed, 2 partially rejected); 8 vetoes. AV-03 lifted in part; AV-08/09/13 stand; AV-10/11 veto wording; AV-12/14 conditional.
+- Blocking: scheduler / 19 procedure bodies / 149 unmeasured units / host hardware / HA/DR / genuine external review.
+
+### Final Gate Result
+`PARTIAL — BOSS DECISION WITH RISKS`
+
+### Findings That Change the Programme
+1. Denominator correction changes the percentage basis. AUTO01–36 is 26.1% of executable units, not 11%; the prior conclusion that it was too narrow still stands, but the previous arithmetic does not.
+2. 45 of the 79 “unproduced” accounting items are not WCF backlog. The register's own category assigns 27 to another organization and 18 to the central accounting unit. This is an organizational-boundary question, not a coding backlog until ownership is confirmed.
+3. 57 of 58 orphan steps have producers in Archive, switched off. Meanwhile `FIN_TR_RECEIPT_TO_CANCEL` was read 10,176 times at runtime while the cancellation journal is never written. The work happens but the accounting record does not. This is configuration/business decision, not simply development.
+4. Boss decision ordering from the result: `TBD-01` re-baseline scope to 290 and `TBD-02` the 45-item boundary come first because all other metrics are measured against them.
+
+### Deliverables / Integrity
+- 22 files in the reported work/output directory.
+- Reported `0 failures` in the 01–20 plus interview register and figure source generation sequence.
+- Manifest rebuilt: `193 files SHA-256 hashed`.
+- Session record committed in the execution environment.
+- Storage remained `COPY_PENDING`; Drive was not mounted and no credential existed, so no upload was attempted or claimed.
+- Raw evidence reported untouched; this session wrote only to a new directory.
+
+### Final Execution Stop
+- `FINAL GATE — WAITING FOR BOSS DECISION`.
+- Pilot not executed.
+- No V3 code written.
+- No technology locked.
+
 ## Evidence Discipline
 - No metric is final merely because it appears in a summary screenshot; underlying artifact/file evidence must remain traceable.
 - Every claim must have evidence location, owner/source, timestamp where available, verification status, and impact.
 - AUTO01–36 must not dominate scope reporting; all percentages must use Whole-WCF denominator once the census denominator is verified.
 - `NO EVIDENCE = NOT PROVEN` remains mandatory.
 
-## Session KPI
-- Whole-WCF Coverage %
-- Evidence Coverage %
-- Process Traceability %
-- Accounting Traceability %
-- Report Traceability %
-- Automation/Broken Classification %
-- V3 Replatform Readiness %
+## Current Decision Gate
+Boss must review at least the following before execution proceeds:
+- Accept/correct Whole-WCF denominator = 290 work units / 138 executable units.
+- Decide ownership boundary for the 45 accounting items not assigned to WCF coding backlog.
+- Decide treatment of the 57 archive/off orphan-step producers and the 1 true orphan.
+- Decide whether missing cancellation-journal write behavior is configuration, business rule, or defect requiring development.
+- Decide hardware/baseline evidence path before any ≥40% performance acceptance.
+- Decide external expert engagement and remaining VETO resolution path.
 
 ## GitHub Control
 This file is the official GitHub Session Record for [WCF-26-08-12-007] and must be maintained as the searchable continuity/evidence trail for this session.
