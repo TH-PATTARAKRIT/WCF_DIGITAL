@@ -1,0 +1,3 @@
+# STATE03 — BUSINESS PROCESS
+Status: CLOSED WITH GAPS / BATCH DEPENDENCY OPEN
+Evidence rule: No Evidence = Not Proven.
