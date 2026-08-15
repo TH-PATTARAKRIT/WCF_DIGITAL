@@ -1,0 +1,21 @@
+﻿REQUIRED_PATH,COVERED_BY,RESULT
+Normal receipt,"FL-01/02, ACC-01",PASS
+Bank receipt TR,"ACC-17, FL-07",PASS
+Bank receipt TT,"ACC-18, BU-02/03",PASS
+Cash tender,"ACC-23 (CASH branch), PAY-02",PASS
+Cheque tender,"ACC-23, PAY-01",PASS
+Multi-invoice,ACC-22,PASS
+Exceed money,"ACC-09/10, D13-01..06",PASS
+No exceed,ACC-10,PASS
+Approved cancellation,"ACC-15, DB2-D01b",PASS
+Unapproved / C guard,"ACC-16/16b, DB2-D08",PASS
+Bank fail / unmatched line,ACC-21,PASS
+Office attribution x5,"OFF-01..05, ACC-11..14",PASS
+RERE / TRRE path,"ACC-11/13, FL-04/05",PASS
+Passbook,"PB-01..05, ACC-24/25",PASS
+Accounting posting,ACC-01..34,PASS
+GL stamp,"GL-11/12, FL-06",PASS
+Re-run / idempotency x3,"ID-01..05, ACC-30, GL-13",PASS
+Failure recovery,"RB-01..06, PBF-01..06, GL-15/16",PASS
+Fee / fine,ACC-08/26,PASS
+Precision 999.99,ACC-33,PASS
