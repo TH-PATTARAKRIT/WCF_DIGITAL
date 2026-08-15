@@ -1,0 +1,2007 @@
+{
+ "manifest": "AUTO07_V31_EVIDENCE_FREEZE_MANIFEST",
+ "session": "WCF-26-08-15-AUTO07-FINAL-GATE-001",
+ "frozen_at_utc": "2026-08-15T12:10:00Z",
+ "baseline": "AUTO07 V3.1 \u2014 full loop proven on real DB2",
+ "evidence_root": "04_BATCH_AUTOMATION/AUTO07/04_V3_LEGACY/05_DB2_EXECUTION_PROOF/",
+ "file_count": 198,
+ "total_bytes": 1111169,
+ "build_sessions": [
+  "00_CONTROL",
+  "01_DB2_SCHEMA",
+  "08_DEFECT",
+  "09_EVIDENCE",
+  "10_FINAL_GATE",
+  "11_BUILD001",
+  "12_BUILD002_P1_FIX_FULL_LOOP",
+  "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+  "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+  "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+  "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+  "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+  "18_FINAL_GATE_001"
+ ],
+ "freeze_rule": "No frozen file may be overwritten. Corrections must be ADDITIVE in a new session folder and must reference the superseded sha256.",
+ "files": [
+  {
+   "path": "00_CONTROL/00_DELIVERABLE_STATUS_REGISTER.csv",
+   "filename": "00_DELIVERABLE_STATUS_REGISTER.csv",
+   "size_bytes": 1935,
+   "modified_utc": "2026-08-15T04:09:51Z",
+   "sha256": "3b08c3ede154ab3ca820a43be2b212463e96d27706ac62b8536ad2c4bdf15602",
+   "source_session": "00_CONTROL",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "00_CONTROL/01_AUTO07_DB2_ENVIRONMENT_GATE.md",
+   "filename": "01_AUTO07_DB2_ENVIRONMENT_GATE.md",
+   "size_bytes": 5433,
+   "modified_utc": "2026-08-15T04:08:20Z",
+   "sha256": "ab4f57ec397970de3f9c18ee708c18f178baa4071089cebedcac464329235870",
+   "source_session": "00_CONTROL",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "00_CONTROL/07_AUTO07_V3_1_BUILD_VERIFICATION.md",
+   "filename": "07_AUTO07_V3_1_BUILD_VERIFICATION.md",
+   "size_bytes": 2510,
+   "modified_utc": "2026-08-15T04:08:36Z",
+   "sha256": "d546dd7db033ab7bfa6195e46a2af6023ef6e21f6b5340453b320ce05ee099c9",
+   "source_session": "00_CONTROL",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "01_DB2_SCHEMA/02_AUTO07_DB2_FIN_SCHEMA_V3_1.sql",
+   "filename": "02_AUTO07_DB2_FIN_SCHEMA_V3_1.sql",
+   "size_bytes": 16835,
+   "modified_utc": "2026-08-15T04:05:47Z",
+   "sha256": "647218dafeb1dd3f492528ec6ba7b2c1fbbcd0b96018513bb502eff7f1efd77a",
+   "source_session": "01_DB2_SCHEMA",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "01_DB2_SCHEMA/03_AUTO07_DB2_SCHEMA_CONVERSION_MATRIX.csv",
+   "filename": "03_AUTO07_DB2_SCHEMA_CONVERSION_MATRIX.csv",
+   "size_bytes": 45465,
+   "modified_utc": "2026-08-15T04:05:47Z",
+   "sha256": "e4d587e46db85c3e8663c77596e4496819190a382e36568c58202278d3dbeb71",
+   "source_session": "01_DB2_SCHEMA",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "01_DB2_SCHEMA/03_AUTO07_DB2_SCHEMA_CONVERSION_MATRIX.xlsx",
+   "filename": "03_AUTO07_DB2_SCHEMA_CONVERSION_MATRIX.xlsx",
+   "size_bytes": 15350,
+   "modified_utc": "2026-08-15T04:05:47Z",
+   "sha256": "a3946cad7c3146a538fae855e8e02f0b3ec5cc2af92862001ade080602ea9c56",
+   "source_session": "01_DB2_SCHEMA",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "01_DB2_SCHEMA/04_AUTO07_DB2_FIN_CONTRACT_PREFLIGHT.csv",
+   "filename": "04_AUTO07_DB2_FIN_CONTRACT_PREFLIGHT.csv",
+   "size_bytes": 5771,
+   "modified_utc": "2026-08-15T04:06:43Z",
+   "sha256": "759f09e083d6b5459095ec24c09f4a300b31729352e800fb330595b5aa38693a",
+   "source_session": "01_DB2_SCHEMA",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "01_DB2_SCHEMA/05_AUTO07_DB2_FIN_INDEX_REGISTER.csv",
+   "filename": "05_AUTO07_DB2_FIN_INDEX_REGISTER.csv",
+   "size_bytes": 7611,
+   "modified_utc": "2026-08-15T04:05:47Z",
+   "sha256": "f57d6374f24978440f10b9a8b81618d122ec0dad1aeacf28064bdcead3746644",
+   "source_session": "01_DB2_SCHEMA",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "01_DB2_SCHEMA/06_AUTO07_DB2_CRITICAL_FIELD_COVERAGE.csv",
+   "filename": "06_AUTO07_DB2_CRITICAL_FIELD_COVERAGE.csv",
+   "size_bytes": 7964,
+   "modified_utc": "2026-08-15T04:07:39Z",
+   "sha256": "dd8191a9e17efe0f183e439d621274a2ce19098c2b119c3317a47aa0d155bba7",
+   "source_session": "01_DB2_SCHEMA",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "01_DB2_SCHEMA/_P5_fin_source_snapshot.sql",
+   "filename": "_P5_fin_source_snapshot.sql",
+   "size_bytes": 10470,
+   "modified_utc": "2026-08-15T04:02:56Z",
+   "sha256": "a0bf02b5d10ae63f44637e808b0582746a175fe1508f6c260e04947ff372d313",
+   "source_session": "01_DB2_SCHEMA",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "08_DEFECT/13_AUTO07_DB2_DEFECT_REGISTER.csv",
+   "filename": "13_AUTO07_DB2_DEFECT_REGISTER.csv",
+   "size_bytes": 6025,
+   "modified_utc": "2026-08-15T04:09:51Z",
+   "sha256": "2449cdf67f1ef2edf6ee268083f512b1f5985d06d817247044c76ac7d0732916",
+   "source_session": "08_DEFECT",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "09_EVIDENCE/17_AUTO07_DB2_MACHINE_READABLE_EVIDENCE.json",
+   "filename": "17_AUTO07_DB2_MACHINE_READABLE_EVIDENCE.json",
+   "size_bytes": 2221,
+   "modified_utc": "2026-08-15T04:09:51Z",
+   "sha256": "16366a67b881d979bfbbee49e3000bc3ad25e1c3eee81bc190734422b905b78d",
+   "source_session": "09_EVIDENCE",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "09_EVIDENCE/scripts/build_db2_fin_schema.py",
+   "filename": "build_db2_fin_schema.py",
+   "size_bytes": 19957,
+   "modified_utc": "2026-08-15T04:10:26Z",
+   "sha256": "9ad3852e0e77f520b607f7193b2a6d315f540440762fbbf54acde1ed72a5eb2a",
+   "source_session": "09_EVIDENCE",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "09_EVIDENCE/scripts/build_registers.py",
+   "filename": "build_registers.py",
+   "size_bytes": 12760,
+   "modified_utc": "2026-08-15T04:10:26Z",
+   "sha256": "bb0484d344d1fdf52443b0fec1638efa8b51d23601caf7d83ba03a9f2a64d0a8",
+   "source_session": "09_EVIDENCE",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "09_EVIDENCE/scripts/critical_fields.py",
+   "filename": "critical_fields.py",
+   "size_bytes": 3381,
+   "modified_utc": "2026-08-15T04:10:26Z",
+   "sha256": "abc03018fb7d12642219be486429e6829ed33ef0d25a2d564d8099592cfc8095",
+   "source_session": "09_EVIDENCE",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "09_EVIDENCE/scripts/preflight_fin_contract.py",
+   "filename": "preflight_fin_contract.py",
+   "size_bytes": 4917,
+   "modified_utc": "2026-08-15T04:10:26Z",
+   "sha256": "4258108fc4ed7131481e5132af03b588f42f1ce6f1923e4ea85c1e200f53c2dc",
+   "source_session": "09_EVIDENCE",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "10_FINAL_GATE/15_AUTO07_DB2_EXECUTION_SUMMARY.md",
+   "filename": "15_AUTO07_DB2_EXECUTION_SUMMARY.md",
+   "size_bytes": 2810,
+   "modified_utc": "2026-08-15T04:10:45Z",
+   "sha256": "926ebdfd5ad127e4300270e12ecff3fd2284cfeff49fb295ef5bd517b502af9f",
+   "source_session": "10_FINAL_GATE",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "10_FINAL_GATE/16_AUTO07_DB2_FINAL_GATE.md",
+   "filename": "16_AUTO07_DB2_FINAL_GATE.md",
+   "size_bytes": 4299,
+   "modified_utc": "2026-08-15T04:10:18Z",
+   "sha256": "027457d16b3ec874ba89dafca986d8e45d84317fb89efa618a023ec86698032d",
+   "source_session": "10_FINAL_GATE",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/03_GL_ID/GL_ID_CANONICAL_CONTRACT.md",
+   "filename": "GL_ID_CANONICAL_CONTRACT.md",
+   "size_bytes": 2774,
+   "modified_utc": "2026-08-15T04:40:11Z",
+   "sha256": "9a9b9d61434d614e6a26fbe62fa921a53e03f8bde74cd25ef24c25a729d972f9",
+   "source_session": "11_BUILD001",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/06_DEFECT/AUTO07_DEFECT_REGISTER.csv",
+   "filename": "AUTO07_DEFECT_REGISTER.csv",
+   "size_bytes": 5174,
+   "modified_utc": "2026-08-15T04:40:11Z",
+   "sha256": "e2f3ff8d8752b35e8ec6287e324fc49b7afe05401b2859f64a3ebab983b3321c",
+   "source_session": "11_BUILD001",
+   "category": "gate",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/06_DEFECT/AUTO07_DEFECT_REGISTER.xlsx",
+   "filename": "AUTO07_DEFECT_REGISTER.xlsx",
+   "size_bytes": 8044,
+   "modified_utc": "2026-08-15T04:40:11Z",
+   "sha256": "8b7a64a42470ba88862b37f3bff8efed6ecc2efe296454f7ce8248ccf1532336",
+   "source_session": "11_BUILD001",
+   "category": "gate",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/07_FINAL_GATE/AUTO07_FINAL_EXECUTION_GATE.md",
+   "filename": "AUTO07_FINAL_EXECUTION_GATE.md",
+   "size_bytes": 5379,
+   "modified_utc": "2026-08-15T04:41:12Z",
+   "sha256": "2d87033ffb4016b8f9225e9af3583bb69fe5e0fbafb008fac63b0e69797c46cf",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/07_FINAL_GATE/AUTO07_MACHINE_READABLE_EVIDENCE.json",
+   "filename": "AUTO07_MACHINE_READABLE_EVIDENCE.json",
+   "size_bytes": 3210,
+   "modified_utc": "2026-08-15T04:41:33Z",
+   "sha256": "522389c8e6d4e9cb2f9d8b39cd51cad594485640a2439722431b0d57cb2fa4fc",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/00_CONTROL/build_matrices.py",
+   "filename": "build_matrices.py",
+   "size_bytes": 9771,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "ebd7237b2d9a9c9cb52d08f3f55f624b40b9a07efd43c95ee02e10e5172309cb",
+   "source_session": "11_BUILD001",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/00_CONTROL/census.py",
+   "filename": "census.py",
+   "size_bytes": 6432,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "1b9a1c6178b329244a7fdd1ced24abe188c10bd1aaec29a61a8b0b4c2161a856",
+   "source_session": "11_BUILD001",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/00_CONTROL/fieldcov.py",
+   "filename": "fieldcov.py",
+   "size_bytes": 4812,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "590a81c921b1ec3f7127a0d4e78f57b22ef64b6243503f8fd933f857983eb01a",
+   "source_session": "11_BUILD001",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/00_CONTROL/final_deliv.py",
+   "filename": "final_deliv.py",
+   "size_bytes": 11627,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "f6284529287626f368434ad60c64363380620c898dfd700a461d122f790337e5",
+   "source_session": "11_BUILD001",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/accounting_results.csv",
+   "filename": "accounting_results.csv",
+   "size_bytes": 1087,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "3f50f6200ee2111e0d77d928b4bd53b6eea077d43cdacfff74904650e041a1ef",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/accounting_run.log",
+   "filename": "accounting_run.log",
+   "size_bytes": 181,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "ff6793fb2a22668a1ce6b019cedef723ae45f47a9bdad5c64eac4bd2e241f383",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/accounting_summary.txt",
+   "filename": "accounting_summary.txt",
+   "size_bytes": 181,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "ff6793fb2a22668a1ce6b019cedef723ae45f47a9bdad5c64eac4bd2e241f383",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/all_results.csv",
+   "filename": "all_results.csv",
+   "size_bytes": 17488,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "8b12a3dd7c058ad38520988756c10de488e441b044e2613089b993dc21d700a5",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/all_run.log",
+   "filename": "all_run.log",
+   "size_bytes": 176,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "edbbb217a6569f6594e8ad64ae7df531f5c2aa04135e57f00962c2f549fb1536",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/all_summary.txt",
+   "filename": "all_summary.txt",
+   "size_bytes": 176,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "edbbb217a6569f6594e8ad64ae7df531f5c2aa04135e57f00962c2f549fb1536",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/failure_recovery_results.csv",
+   "filename": "failure_recovery_results.csv",
+   "size_bytes": 1618,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "0bd85d4728e758c857e22f41a97c5c62089a7da10bfe7412dab6b1d91972e871",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/failure_recovery_run.log",
+   "filename": "failure_recovery_run.log",
+   "size_bytes": 187,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "bb3e11a2e013942044bbe4be92e95128580e88dda7f99aa057d8a64e032e67a7",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/failure_recovery_summary.txt",
+   "filename": "failure_recovery_summary.txt",
+   "size_bytes": 187,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "bb3e11a2e013942044bbe4be92e95128580e88dda7f99aa057d8a64e032e67a7",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/golden33_results.csv",
+   "filename": "golden33_results.csv",
+   "size_bytes": 8033,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "0a625867dd1cddb91fabce43fa3fcbc321400d3f20886a0d67f61b3f915e4369",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/golden33_run.log",
+   "filename": "golden33_run.log",
+   "size_bytes": 187,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "aa9d927c7710d2b343ab125f21f5d2d4a4349a803522a01b565d650ac4419d48",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/golden33_summary.txt",
+   "filename": "golden33_summary.txt",
+   "size_bytes": 187,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "aa9d927c7710d2b343ab125f21f5d2d4a4349a803522a01b565d650ac4419d48",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/idempotency_results.csv",
+   "filename": "idempotency_results.csv",
+   "size_bytes": 560,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "37154fef9e31ea4bbc327947d536e0a07b4a130fe08fb131b720790a5d123fa6",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/idempotency_run.log",
+   "filename": "idempotency_run.log",
+   "size_bytes": 182,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "81352a9139900d3c3be20423c818407254360a0b8adaa0e116e85d83753ef0f2",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/idempotency_summary.txt",
+   "filename": "idempotency_summary.txt",
+   "size_bytes": 182,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "81352a9139900d3c3be20423c818407254360a0b8adaa0e116e85d83753ef0f2",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/monitoring_results.csv",
+   "filename": "monitoring_results.csv",
+   "size_bytes": 690,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "772711341673eff4a4378a8c5bd2f56824e39deef9777e963aa102ac7566c93f",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/monitoring_run.log",
+   "filename": "monitoring_run.log",
+   "size_bytes": 181,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "54065e3a207d95c2598ff806777ef1499c9c7521a5b55a416a68971ddb4292c9",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/monitoring_summary.txt",
+   "filename": "monitoring_summary.txt",
+   "size_bytes": 181,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "54065e3a207d95c2598ff806777ef1499c9c7521a5b55a416a68971ddb4292c9",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/rere_results.csv",
+   "filename": "rere_results.csv",
+   "size_bytes": 497,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "44f23a3bacef815f499e8a2e62823c34514546239754e7dfb1a91007a2016b8c",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/rere_run.log",
+   "filename": "rere_run.log",
+   "size_bytes": 175,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "31fffcf18777c20a0e9df183015e918e34139740c0be41013de86d22528c23c7",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/rere_summary.txt",
+   "filename": "rere_summary.txt",
+   "size_bytes": 175,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "31fffcf18777c20a0e9df183015e918e34139740c0be41013de86d22528c23c7",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/run_summary.csv",
+   "filename": "run_summary.csv",
+   "size_bytes": 373,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "fdb231972baf80b18957e041e5de83e423fea96d14430a7e500f49ab7408f299",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/runlock_results.csv",
+   "filename": "runlock_results.csv",
+   "size_bytes": 528,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "6e4de6f5cf4e6f9ec113a192b64c3683cd1f40c6af52c1df013b7c4f7fa43171",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/runlock_run.log",
+   "filename": "runlock_run.log",
+   "size_bytes": 178,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "a59a2472db77178f71ae78ad10ac50ab3d5e6101b43b39f5a2f66614a0ec822d",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/05_TEST_RESULTS/runlock_summary.txt",
+   "filename": "runlock_summary.txt",
+   "size_bytes": 178,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "a59a2472db77178f71ae78ad10ac50ab3d5e6101b43b39f5a2f66614a0ec822d",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/01_DEPENDENCY/AUTO07_TABLE_DEPENDENCY_MATRIX.csv",
+   "filename": "AUTO07_TABLE_DEPENDENCY_MATRIX.csv",
+   "size_bytes": 4887,
+   "modified_utc": "2026-08-15T04:38:02Z",
+   "sha256": "175c8efd93d933a86610e73156f6d3bafe28cb09131a49d40b2e612fc03b58b3",
+   "source_session": "11_BUILD001",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/01_DEPENDENCY/AUTO07_TABLE_DEPENDENCY_MATRIX.md",
+   "filename": "AUTO07_TABLE_DEPENDENCY_MATRIX.md",
+   "size_bytes": 6261,
+   "modified_utc": "2026-08-15T04:38:02Z",
+   "sha256": "21ba35383cd41e6e9c60160ff6a67fe829b69d553c3c25978f11da2cceac985a",
+   "source_session": "11_BUILD001",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/04_BUILD/AUTO07_BUILD_LOG.txt",
+   "filename": "AUTO07_BUILD_LOG.txt",
+   "size_bytes": 200557,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "88b17d5387418b322f30c82284963966a1ba96c04b39642bb70c55cb5c942e0c",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/04_BUILD/BUILD_ENVIRONMENT_PROOF.md",
+   "filename": "BUILD_ENVIRONMENT_PROOF.md",
+   "size_bytes": 2606,
+   "modified_utc": "2026-08-15T04:40:39Z",
+   "sha256": "e25a08e95dec13ab3b51fd6ce4ce7aefe2e77f1bd01006648f7c123750068255",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/04_BUILD/V3LEGACY_COMPILE_LOG.txt",
+   "filename": "V3LEGACY_COMPILE_LOG.txt",
+   "size_bytes": 0,
+   "modified_utc": "2026-08-15T04:40:20Z",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "source_session": "11_BUILD001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/02_FIELD_COVERAGE/AUTO07_CRITICAL_FIELD_COVERAGE_MATRIX.csv",
+   "filename": "AUTO07_CRITICAL_FIELD_COVERAGE_MATRIX.csv",
+   "size_bytes": 8723,
+   "modified_utc": "2026-08-15T04:40:11Z",
+   "sha256": "bb71da8d4a95fd1f7056b11dede01d815b220cdde5c74e0773812027858b4c80",
+   "source_session": "11_BUILD001",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "11_BUILD001/02_FIELD_COVERAGE/AUTO07_CRITICAL_FIELD_COVERAGE_MATRIX.xlsx",
+   "filename": "AUTO07_CRITICAL_FIELD_COVERAGE_MATRIX.xlsx",
+   "size_bytes": 11588,
+   "modified_utc": "2026-08-15T04:40:11Z",
+   "sha256": "418423b293605acf44279f36b002afaba8ed09be094d30be19574d717eeacca0",
+   "source_session": "11_BUILD001",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/02_D02_FEE/BUILD002_D02_FEE_ACCOUNTING_FIX_PROOF.md",
+   "filename": "BUILD002_D02_FEE_ACCOUNTING_FIX_PROOF.md",
+   "size_bytes": 4023,
+   "modified_utc": "2026-08-15T04:59:12Z",
+   "sha256": "41814f1dde38e43c56f99c9e39952fa2059ef6472ecee7fd4cfa0e05aecd28d3",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/04_GL_ID/GL_ID_DB2_CATALOGUE_PROOF.md",
+   "filename": "GL_ID_DB2_CATALOGUE_PROOF.md",
+   "size_bytes": 3171,
+   "modified_utc": "2026-08-15T05:21:55Z",
+   "sha256": "58b34fc76aa5691ac2405b52b42f127c40372b73741391c98df8221d294afc46",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/08_DEFECT/AUTO07_DEFECT_REGISTER_BUILD002.csv",
+   "filename": "AUTO07_DEFECT_REGISTER_BUILD002.csv",
+   "size_bytes": 3506,
+   "modified_utc": "2026-08-15T05:00:29Z",
+   "sha256": "87854b0abe931d6ca66ea64d113124e7fb609dcb1e8d381b1e6f2930a8767636",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "defect",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/08_DEFECT/AUTO07_DEFECT_REGISTER_BUILD002.xlsx",
+   "filename": "AUTO07_DEFECT_REGISTER_BUILD002.xlsx",
+   "size_bytes": 7165,
+   "modified_utc": "2026-08-15T05:00:29Z",
+   "sha256": "35b0755e5aee97265ad4dbd3a3c41a5ae64b29a61156b3c749a60028b1c6da28",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "defect",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/03_DEPENDENCIES/AUTO07_ORIGINAL_9_MISSING_DEPENDENCIES.md",
+   "filename": "AUTO07_ORIGINAL_9_MISSING_DEPENDENCIES.md",
+   "size_bytes": 5395,
+   "modified_utc": "2026-08-15T04:59:46Z",
+   "sha256": "329fc6bfdb002839d16ef20aafbe603492c38a7ea2b6be883d41dbe84db81973",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/07_TEST_RESULTS/all.log",
+   "filename": "all.log",
+   "size_bytes": 2540,
+   "modified_utc": "2026-08-15T04:57:58Z",
+   "sha256": "5c927e02332f8db2612be98b383ed7f481388308891276f4f4de77763f54c078",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/07_TEST_RESULTS/all2.log",
+   "filename": "all2.log",
+   "size_bytes": 231,
+   "modified_utc": "2026-08-15T04:57:58Z",
+   "sha256": "133215b6b5f74ecea3247e0c08258bad78cc6610a8249fbaa8a74666423cca66",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/07_TEST_RESULTS/all_results.csv",
+   "filename": "all_results.csv",
+   "size_bytes": 17484,
+   "modified_utc": "2026-08-15T04:57:58Z",
+   "sha256": "79947acbb949048d1114b1e9489eeef258ce993eaf0b6a113f6e71fb4488c7d6",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/07_TEST_RESULTS/all_summary.txt",
+   "filename": "all_summary.txt",
+   "size_bytes": 176,
+   "modified_utc": "2026-08-15T04:57:58Z",
+   "sha256": "2bea2927b1e6bc7630b20b7069d2a00122036f3d8d4fab32809c32fa6fb5feb6",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/07_TEST_RESULTS/db2_loop_proof.txt",
+   "filename": "db2_loop_proof.txt",
+   "size_bytes": 993,
+   "modified_utc": "2026-08-15T05:21:04Z",
+   "sha256": "4e2c2f0d1fb10f8455476151591e044d393750dea4e7a3338cfe2107520f7d00",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/07_TEST_RESULTS/glid_catalogue.txt",
+   "filename": "glid_catalogue.txt",
+   "size_bytes": 364,
+   "modified_utc": "2026-08-15T05:21:04Z",
+   "sha256": "97df5e7097d226f15d63d204a8700c2a5aaac446a554413bb660124fd5048361",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/07_TEST_RESULTS/golden33.log",
+   "filename": "golden33.log",
+   "size_bytes": 243,
+   "modified_utc": "2026-08-15T04:57:58Z",
+   "sha256": "3748c992d23d77336d711541cd9d8babfe5f42c48eb6692379b77faa3ece69e8",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/07_TEST_RESULTS/golden33_results.csv",
+   "filename": "golden33_results.csv",
+   "size_bytes": 8026,
+   "modified_utc": "2026-08-15T04:57:58Z",
+   "sha256": "e694e3d7529264dc851dac8aeeecab921506a64fdad3be14760be1ab75aea20e",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/07_TEST_RESULTS/golden33_summary.txt",
+   "filename": "golden33_summary.txt",
+   "size_bytes": 188,
+   "modified_utc": "2026-08-15T04:57:58Z",
+   "sha256": "4594f7cfdf1e0d85e92dbeb96d8b5cdd0314397584767f46644abb1557b18b65",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/07_TEST_RESULTS/run_summary.csv",
+   "filename": "run_summary.csv",
+   "size_bytes": 122,
+   "modified_utc": "2026-08-15T04:57:58Z",
+   "sha256": "175fbd23220354c9c678bc44600429987189774890f90f2da17b99576c3fe862",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/09_FINAL_GATE/AUTO07_FINAL_EXECUTION_GATE_BUILD002.md",
+   "filename": "AUTO07_FINAL_EXECUTION_GATE_BUILD002.md",
+   "size_bytes": 6134,
+   "modified_utc": "2026-08-15T05:22:33Z",
+   "sha256": "a3402b9ceff309fd5b186342833ac3350ae15fc6910a0db7da62afe7802fe646",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/09_FINAL_GATE/BUILD002_MACHINE_READABLE_EVIDENCE.json",
+   "filename": "BUILD002_MACHINE_READABLE_EVIDENCE.json",
+   "size_bytes": 2022,
+   "modified_utc": "2026-08-15T05:22:50Z",
+   "sha256": "48218ee332993a91ac22f25209f7b94097d6633fe750160bec9210760d8aa825",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/01_D01_CANCEL/BUILD002_D01_CANCEL_FIX_PROOF.md",
+   "filename": "BUILD002_D01_CANCEL_FIX_PROOF.md",
+   "size_bytes": 6148,
+   "modified_utc": "2026-08-15T04:58:34Z",
+   "sha256": "65c25e430c2758a40cae1ddcecbde634a19933e847c6fe732b125c489e162e61",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/00_CONTROL/ConnProbe.java",
+   "filename": "ConnProbe.java",
+   "size_bytes": 851,
+   "modified_utc": "2026-08-15T05:21:04Z",
+   "sha256": "f73af1c488d843838772817293ee77e16880c8c2479f445a133bfa64a37bde6e",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/00_CONTROL/Db2LoopProof.java",
+   "filename": "Db2LoopProof.java",
+   "size_bytes": 7665,
+   "modified_utc": "2026-08-15T05:21:04Z",
+   "sha256": "5e38e0b61a720f38df968400e34b0fe2674a2bc030eb0ce3880ba3073f49bb4c",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/00_CONTROL/GlIdCat.java",
+   "filename": "GlIdCat.java",
+   "size_bytes": 719,
+   "modified_utc": "2026-08-15T05:21:04Z",
+   "sha256": "472a7a07e418d71fe444e178a322203edb54a550e3361b9248403b406e9601ec",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/05_DB2_ENV/DB2_TEST_ENVIRONMENT_PROOF.md",
+   "filename": "DB2_TEST_ENVIRONMENT_PROOF.md",
+   "size_bytes": 3507,
+   "modified_utc": "2026-08-15T05:21:32Z",
+   "sha256": "f2022c5e7bde71227705361f64d2f71dcb9067a81d9656a79d4f364364d674b9",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "12_BUILD002_P1_FIX_FULL_LOOP/06_BUILD/BUILD002_COMPILE.txt",
+   "filename": "BUILD002_COMPILE.txt",
+   "size_bytes": 0,
+   "modified_utc": "2026-08-15T04:57:58Z",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "source_session": "12_BUILD002_P1_FIX_FULL_LOOP",
+   "category": "gate",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/01_GRO15/GRO15_STATUS_RECONCILIATION.md",
+   "filename": "GRO15_STATUS_RECONCILIATION.md",
+   "size_bytes": 4355,
+   "modified_utc": "2026-08-15T05:42:27Z",
+   "sha256": "2903ba1023f979cab371783c7e4a93406b8a90f056c7a76a26a4e7a8c63aa002",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/06_FINAL_GATE/AUTO07_FINAL_EXECUTION_GATE_BUILD003.md",
+   "filename": "AUTO07_FINAL_EXECUTION_GATE_BUILD003.md",
+   "size_bytes": 5866,
+   "modified_utc": "2026-08-15T05:43:31Z",
+   "sha256": "19fc80fe21f6ef4199d4f3cd84f1f08645bb3143e8f3801a4b5e329f667a1e14",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "gate",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/06_FINAL_GATE/BUILD003_MACHINE_READABLE_EVIDENCE.json",
+   "filename": "BUILD003_MACHINE_READABLE_EVIDENCE.json",
+   "size_bytes": 1885,
+   "modified_utc": "2026-08-15T05:43:53Z",
+   "sha256": "cd52390d17c49de0becd66f74a0c96c7fc08aa90d60bc233b0065dd7145be105",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "gate",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/02_GL_ID/GL_ID_AUTHORITATIVE_DB2_PROOF.md",
+   "filename": "GL_ID_AUTHORITATIVE_DB2_PROOF.md",
+   "size_bytes": 4187,
+   "modified_utc": "2026-08-15T05:42:54Z",
+   "sha256": "89fc3a02967a33ffbded8ab815898a91fd329c4a85aed75478dc5c34af7d56b6",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/00_CONTROL/Db2BankUnionProof.java",
+   "filename": "Db2BankUnionProof.java",
+   "size_bytes": 4392,
+   "modified_utc": "2026-08-15T05:42:01Z",
+   "sha256": "106c934ca650330ac3d549b07f8de678c30398ec8ca20dd19e63600a5329d89d",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/00_CONTROL/Db2LoopProof.java",
+   "filename": "Db2LoopProof.java",
+   "size_bytes": 7665,
+   "modified_utc": "2026-08-15T05:42:01Z",
+   "sha256": "5e38e0b61a720f38df968400e34b0fe2674a2bc030eb0ce3880ba3073f49bb4c",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/00_CONTROL/b003_compile.txt",
+   "filename": "b003_compile.txt",
+   "size_bytes": 0,
+   "modified_utc": "2026-08-15T05:42:01Z",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/04_TEST_RESULTS/all_results.csv",
+   "filename": "all_results.csv",
+   "size_bytes": 17491,
+   "modified_utc": "2026-08-15T05:42:01Z",
+   "sha256": "5c08b377fe31add5045e63b841fc20472f6404c6ce3d0530b94b88f1c0b43b11",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/04_TEST_RESULTS/all_summary.txt",
+   "filename": "all_summary.txt",
+   "size_bytes": 176,
+   "modified_utc": "2026-08-15T05:42:01Z",
+   "sha256": "83dbc172f84db3d035150cf97b0a8fc69c8bbd8a1cfb866c954e79b39cca76d2",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/04_TEST_RESULTS/db2_bank_union_proof.txt",
+   "filename": "db2_bank_union_proof.txt",
+   "size_bytes": 669,
+   "modified_utc": "2026-08-15T05:42:01Z",
+   "sha256": "70d5784919d692a12fb8afc99200bfaf93b7cf2c8d4f654335de3c373ca96b77",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/04_TEST_RESULTS/db2_loop_proof.txt",
+   "filename": "db2_loop_proof.txt",
+   "size_bytes": 993,
+   "modified_utc": "2026-08-15T05:42:01Z",
+   "sha256": "4e2c2f0d1fb10f8455476151591e044d393750dea4e7a3338cfe2107520f7d00",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/04_TEST_RESULTS/glid_catalogue.txt",
+   "filename": "glid_catalogue.txt",
+   "size_bytes": 364,
+   "modified_utc": "2026-08-15T05:42:01Z",
+   "sha256": "97df5e7097d226f15d63d204a8700c2a5aaac446a554413bb660124fd5048361",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/04_TEST_RESULTS/golden33_results.csv",
+   "filename": "golden33_results.csv",
+   "size_bytes": 8033,
+   "modified_utc": "2026-08-15T05:42:01Z",
+   "sha256": "0a625867dd1cddb91fabce43fa3fcbc321400d3f20886a0d67f61b3f915e4369",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/04_TEST_RESULTS/golden33_summary.txt",
+   "filename": "golden33_summary.txt",
+   "size_bytes": 188,
+   "modified_utc": "2026-08-15T05:42:01Z",
+   "sha256": "85ac574e1ab13966fe28dbea03bb18a1bb19b76463383f54dfc4b663565e95f5",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/04_TEST_RESULTS/run_summary.csv",
+   "filename": "run_summary.csv",
+   "size_bytes": 252,
+   "modified_utc": "2026-08-15T05:42:01Z",
+   "sha256": "9a44cafe87620fbd2f51dbd4ce4a6c17f99bf95dcd763e5f27cb337a205af5a3",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY/05_DEFECT/AUTO07_DEFECT_REGISTER_BUILD003.csv",
+   "filename": "AUTO07_DEFECT_REGISTER_BUILD003.csv",
+   "size_bytes": 1091,
+   "modified_utc": "2026-08-15T05:43:53Z",
+   "sha256": "9a0dbd94a484f9499cd13344972841361659d2310f1467be0b2155b09aca4029",
+   "source_session": "13_BUILD003_GRO15_GLID_DEPENDENCY_RECOVERY",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/06_FINAL_GATE/AUTO07_FINAL_EXECUTION_GATE_BUILD004.md",
+   "filename": "AUTO07_FINAL_EXECUTION_GATE_BUILD004.md",
+   "size_bytes": 5442,
+   "modified_utc": "2026-08-15T06:07:30Z",
+   "sha256": "7bdab496195704a538fc03fbc293115d45e01d0a0ac08d377fd3d67a6d9b613c",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "gate",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/06_FINAL_GATE/BUILD004_MACHINE_READABLE_EVIDENCE.json",
+   "filename": "BUILD004_MACHINE_READABLE_EVIDENCE.json",
+   "size_bytes": 1409,
+   "modified_utc": "2026-08-15T06:07:48Z",
+   "sha256": "0ebed6297d6a0ab83005e44872d0056a62514bce28f182435562dbd8f724724d",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "gate",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/03_DEPENDENCIES/AUTO07_ORIGINAL_9_MISSING_DEPENDENCIES.md",
+   "filename": "AUTO07_ORIGINAL_9_MISSING_DEPENDENCIES.md",
+   "size_bytes": 3062,
+   "modified_utc": "2026-08-15T06:06:54Z",
+   "sha256": "1032c14a8561f7939cca8aeba8c1d3ea51a9f0494fd7f9d095e6223837fe3b44",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/02_OFFICE/OFFICE_OWNERSHIP_MAPPING_PROOF.md",
+   "filename": "OFFICE_OWNERSHIP_MAPPING_PROOF.md",
+   "size_bytes": 3236,
+   "modified_utc": "2026-08-15T06:06:26Z",
+   "sha256": "44a1162b39aa8318c8021a15bbeeb0d1b0706922996e379e2c0ac217520f6206",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/01_TRRE/ACC_TR_TRRE_REPORT_ORIGINAL_CONTRACT.md",
+   "filename": "ACC_TR_TRRE_REPORT_ORIGINAL_CONTRACT.md",
+   "size_bytes": 3633,
+   "modified_utc": "2026-08-15T06:06:05Z",
+   "sha256": "be9488e325387c7f5bae771a8c72a28029531abc7bf34dcb1156cb3d137b7951",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/00_CONTROL/Db2Build004Proof.java",
+   "filename": "Db2Build004Proof.java",
+   "size_bytes": 9608,
+   "modified_utc": "2026-08-15T06:05:39Z",
+   "sha256": "8004c93a3a431c68410c11997e1c6c62e4376dee6ccffb570c6d30fd429b59eb",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/00_CONTROL/SchemaRedeploy.java",
+   "filename": "SchemaRedeploy.java",
+   "size_bytes": 2274,
+   "modified_utc": "2026-08-15T06:05:39Z",
+   "sha256": "c56f80efcef3684e3395caa75de6e3fc9ac82fc4cb53c28228ee089f9f87db94",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/00_CONTROL/b004_compile.txt",
+   "filename": "b004_compile.txt",
+   "size_bytes": 0,
+   "modified_utc": "2026-08-15T06:05:39Z",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/04_TEST_RESULTS/Db2BankUnionProof_rerun.txt",
+   "filename": "Db2BankUnionProof_rerun.txt",
+   "size_bytes": 669,
+   "modified_utc": "2026-08-15T06:05:39Z",
+   "sha256": "70d5784919d692a12fb8afc99200bfaf93b7cf2c8d4f654335de3c373ca96b77",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/04_TEST_RESULTS/Db2LoopProof_rerun.txt",
+   "filename": "Db2LoopProof_rerun.txt",
+   "size_bytes": 993,
+   "modified_utc": "2026-08-15T06:05:39Z",
+   "sha256": "4e2c2f0d1fb10f8455476151591e044d393750dea4e7a3338cfe2107520f7d00",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/04_TEST_RESULTS/all_results.csv",
+   "filename": "all_results.csv",
+   "size_bytes": 17509,
+   "modified_utc": "2026-08-15T06:05:39Z",
+   "sha256": "6ef1a475c1aa5f612c540f466da21f1275794b3b31d9d755c4daa0c41bb29143",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/04_TEST_RESULTS/all_summary.txt",
+   "filename": "all_summary.txt",
+   "size_bytes": 176,
+   "modified_utc": "2026-08-15T06:05:39Z",
+   "sha256": "15f1be14d6fee457c24e05be8171d355b21d6027faefe5d61bb1b3e3d9847c53",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/04_TEST_RESULTS/db2_build004_proof.txt",
+   "filename": "db2_build004_proof.txt",
+   "size_bytes": 1046,
+   "modified_utc": "2026-08-15T06:05:39Z",
+   "sha256": "b8eb74d25de7b962ea67df684565f1184df2b78f33969d757ab8065f3b5a5ff1",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/04_TEST_RESULTS/golden33_results.csv",
+   "filename": "golden33_results.csv",
+   "size_bytes": 8033,
+   "modified_utc": "2026-08-15T06:05:39Z",
+   "sha256": "0a625867dd1cddb91fabce43fa3fcbc321400d3f20886a0d67f61b3f915e4369",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/04_TEST_RESULTS/golden33_summary.txt",
+   "filename": "golden33_summary.txt",
+   "size_bytes": 188,
+   "modified_utc": "2026-08-15T06:05:39Z",
+   "sha256": "4c98bdb1444d1be4a6af7b6839f2e8e4a3e299a7414b8058b60eb3cf8d31ee29",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/04_TEST_RESULTS/run_summary.csv",
+   "filename": "run_summary.csv",
+   "size_bytes": 253,
+   "modified_utc": "2026-08-15T06:05:39Z",
+   "sha256": "81da3c5a8dd537de2ebfbedd5ce423e3d1eff38b42ea00c019fbd3f2e50545fa",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP/05_DEFECT/AUTO07_DEFECT_REGISTER_BUILD004.csv",
+   "filename": "AUTO07_DEFECT_REGISTER_BUILD004.csv",
+   "size_bytes": 733,
+   "modified_utc": "2026-08-15T06:07:48Z",
+   "sha256": "0158ab0642b1df525aac111b1c3ef30c49af539004f545c5575b7ad12d4a5a23",
+   "source_session": "14_BUILD004_DEPENDENCY_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/03_ACCOUNTING_33/AUTO07_ACCOUNTING_33_CASES.csv",
+   "filename": "AUTO07_ACCOUNTING_33_CASES.csv",
+   "size_bytes": 9999,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "9212dc525de953c437cfbc63d029c56db93134f3533d5a8b258d400a4e1cde0d",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/03_ACCOUNTING_33/AUTO07_ACCOUNTING_33_CASES.xlsx",
+   "filename": "AUTO07_ACCOUNTING_33_CASES.xlsx",
+   "size_bytes": 9598,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "0100b47c6b53451fa6cef22ae35d19c1363f658e2ba49d4fde3c39c37913715f",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/04_FULL_LOOP/all_results.csv",
+   "filename": "all_results.csv",
+   "size_bytes": 17509,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "df976f0ae2d865afdd1f7f2e35a2a0aefcf2ee7f597e87057b97bf33edccc0a9",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/04_FULL_LOOP/all_summary.txt",
+   "filename": "all_summary.txt",
+   "size_bytes": 176,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "dff7245f29e842d0a37a0437c39079e7929be2ae1f717da7c94c2b4ca775367d",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/04_FULL_LOOP/db2_full_loop.txt",
+   "filename": "db2_full_loop.txt",
+   "size_bytes": 1669,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "24a84d447ce789245d429914a55e61db7899362c4b85dab9f0b73bc49595a97e",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/04_FULL_LOOP/golden33_results.csv",
+   "filename": "golden33_results.csv",
+   "size_bytes": 8033,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "0a625867dd1cddb91fabce43fa3fcbc321400d3f20886a0d67f61b3f915e4369",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/04_FULL_LOOP/golden33_summary.txt",
+   "filename": "golden33_summary.txt",
+   "size_bytes": 188,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "98d9863fa18fe0bf251cbf95a1e3e0715cb2e729186599c761744760870733d7",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/06_FINAL_GATE/AUTO07_BUILD005_FINAL_GATE.md",
+   "filename": "AUTO07_BUILD005_FINAL_GATE.md",
+   "size_bytes": 4696,
+   "modified_utc": "2026-08-15T06:27:31Z",
+   "sha256": "dc4517ccec22a14df22e3f4f13151a037c83a89a43dc0a00d43c74cefbc258fa",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "gate",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/06_FINAL_GATE/BUILD005_MACHINE_READABLE_EVIDENCE.json",
+   "filename": "BUILD005_MACHINE_READABLE_EVIDENCE.json",
+   "size_bytes": 1843,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "e7b257279951805272d68206769a124349a9f98104b21010d6952af91507b616",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "gate",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/00_CONTROL/Db2Build005Proof.java",
+   "filename": "Db2Build005Proof.java",
+   "size_bytes": 6575,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "c970a5e02bef106e16753d5ba5f207dc617b18b32ff1aad371845bf696d78e16",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/00_CONTROL/Db2FullLoop.java",
+   "filename": "Db2FullLoop.java",
+   "size_bytes": 11045,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "fe40177f8b171a03192c17a90354c6d53d7d63bae081a42c9a520d70024cb848",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/00_CONTROL/FixtureLoad.java",
+   "filename": "FixtureLoad.java",
+   "size_bytes": 1230,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "3211f052f16e454bfafc081b5ecb1059159c895914211fbce07ab0a262ee198a",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/00_CONTROL/b005_compile.txt",
+   "filename": "b005_compile.txt",
+   "size_bytes": 0,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/05_DEFECT/AUTO07_BUILD005_DEFECT_REGISTER.csv",
+   "filename": "AUTO07_BUILD005_DEFECT_REGISTER.csv",
+   "size_bytes": 1375,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "778eb44643656d38ee838d53c1a159be43bbba653cece08920f41b11aa1e6156",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/05_DEFECT/AUTO07_BUILD005_DEFECT_REGISTER.xlsx",
+   "filename": "AUTO07_BUILD005_DEFECT_REGISTER.xlsx",
+   "size_bytes": 6042,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "2bf6d3b06a6ad02f904788a48607ae6ecf012f364dd00c8e786acedd31bd558d",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP/01_D13/db2_build005_proof.txt",
+   "filename": "db2_build005_proof.txt",
+   "size_bytes": 611,
+   "modified_utc": "2026-08-15T06:27:02Z",
+   "sha256": "a5b35bd488df261dca696d925c15e6a145d687681fc811c1c0bf9f9a8b4c6ebe",
+   "source_session": "15_BUILD005_D13_ACCOUNTING_FULL_LOOP",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/03_ACCOUNTING_33/AUTO07_ACCOUNTING_33_REAL_DB2_RESULTS.xlsx",
+   "filename": "AUTO07_ACCOUNTING_33_REAL_DB2_RESULTS.xlsx",
+   "size_bytes": 8172,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "324f096e5b831134c16c1820c6e6b6d00b8a0144b1b33211e6a41354de190cc2",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/03_ACCOUNTING_33/acc33_results.csv",
+   "filename": "acc33_results.csv",
+   "size_bytes": 5768,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "b8f26bf48360b4531b70d9c8f24f14fc355ea6c831e485f594647f3fb59913d8",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/03_ACCOUNTING_33/db2_accounting33.txt",
+   "filename": "db2_accounting33.txt",
+   "size_bytes": 6750,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "018183cddbd1954f44ebe97393973365f5814983723a7edb0c62805af597caeb",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/04_FULL_LOOP/AUTO07_FULL_LOOP_REGRESSION_RESULTS.xlsx",
+   "filename": "AUTO07_FULL_LOOP_REGRESSION_RESULTS.xlsx",
+   "size_bytes": 6149,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "05db322a402ffdcbf6dd377968983bd5acc6e65f57d65c503eb5a19605c02362",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/04_FULL_LOOP/AUTO07_GOLDEN_REGRESSION_RESULTS.xlsx",
+   "filename": "AUTO07_GOLDEN_REGRESSION_RESULTS.xlsx",
+   "size_bytes": 9444,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "843f7259ba61bd01514595dce1076850f6a27b8e2a70cafd0fc7c71ccf1734d1",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/04_FULL_LOOP/Db2BankUnionProof_final.txt",
+   "filename": "Db2BankUnionProof_final.txt",
+   "size_bytes": 669,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "70d5784919d692a12fb8afc99200bfaf93b7cf2c8d4f654335de3c373ca96b77",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/04_FULL_LOOP/Db2Build004Proof_final.txt",
+   "filename": "Db2Build004Proof_final.txt",
+   "size_bytes": 1046,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "b8eb74d25de7b962ea67df684565f1184df2b78f33969d757ab8065f3b5a5ff1",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/04_FULL_LOOP/Db2Build005Proof_final.txt",
+   "filename": "Db2Build005Proof_final.txt",
+   "size_bytes": 611,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "a5b35bd488df261dca696d925c15e6a145d687681fc811c1c0bf9f9a8b4c6ebe",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/04_FULL_LOOP/Db2FullLoop_final.txt",
+   "filename": "Db2FullLoop_final.txt",
+   "size_bytes": 2361,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "1b78bed0bd680ecd27b1d848d41de9edb9705f5344ec769c89f9499780d40604",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/04_FULL_LOOP/Db2LoopProof_final.txt",
+   "filename": "Db2LoopProof_final.txt",
+   "size_bytes": 993,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "4e2c2f0d1fb10f8455476151591e044d393750dea4e7a3338cfe2107520f7d00",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/04_FULL_LOOP/Db2PassbookFail_final.txt",
+   "filename": "Db2PassbookFail_final.txt",
+   "size_bytes": 545,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "90e5078442b96a6cf731eac1ab8ed52cd76c14b58239eaf61e3cfd4719e22d47",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/04_FULL_LOOP/all_results.csv",
+   "filename": "all_results.csv",
+   "size_bytes": 17525,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "e7267a63bd0fb005b18c2727acea35ca7d724c45935e3831fbb4ba38a63f1b70",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/04_FULL_LOOP/all_summary.txt",
+   "filename": "all_summary.txt",
+   "size_bytes": 176,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "0059222eab0b8d93d80f2ea6d02c442b88c13fc53b10b2eb6839ad7ff45fddef",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/04_FULL_LOOP/db2_full_loop_passbook.txt",
+   "filename": "db2_full_loop_passbook.txt",
+   "size_bytes": 2361,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "1b78bed0bd680ecd27b1d848d41de9edb9705f5344ec769c89f9499780d40604",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/04_FULL_LOOP/db2_passbook_fail.txt",
+   "filename": "db2_passbook_fail.txt",
+   "size_bytes": 545,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "90e5078442b96a6cf731eac1ab8ed52cd76c14b58239eaf61e3cfd4719e22d47",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/04_FULL_LOOP/golden33_results.csv",
+   "filename": "golden33_results.csv",
+   "size_bytes": 8033,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "0a625867dd1cddb91fabce43fa3fcbc321400d3f20886a0d67f61b3f915e4369",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/04_FULL_LOOP/golden33_summary.txt",
+   "filename": "golden33_summary.txt",
+   "size_bytes": 188,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "d4e0cd07957393dbe97aa5aa88cb09e9191963d8b7b4a116cb659148c588bca1",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/06_FINAL_GATE/AUTO07_BUILD006_FINAL_GATE.md",
+   "filename": "AUTO07_BUILD006_FINAL_GATE.md",
+   "size_bytes": 5619,
+   "modified_utc": "2026-08-15T07:29:04Z",
+   "sha256": "a472042ec2589071cbcf25057e655f39e1ff68489ed14ef9c25777610cffb470",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "gate",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/06_FINAL_GATE/BUILD006_MACHINE_READABLE_EVIDENCE.json",
+   "filename": "BUILD006_MACHINE_READABLE_EVIDENCE.json",
+   "size_bytes": 1806,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "76f9d7e41a012daede38eca6c4dfa944750c1a2c5e621483ebc5b9589f01c05b",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "gate",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/01_PASSBOOK_EVIDENCE/PASSBOOK_ACTUAL_DATA_RECONCILIATION.xlsx",
+   "filename": "PASSBOOK_ACTUAL_DATA_RECONCILIATION.xlsx",
+   "size_bytes": 6065,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "ee0ab159ebcb4938a137feef623b54baebc20b7435b3208666d688d977038b30",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/01_PASSBOOK_EVIDENCE/PASSBOOK_BUSINESS_FIELD_MAPPING.xlsx",
+   "filename": "PASSBOOK_BUSINESS_FIELD_MAPPING.xlsx",
+   "size_bytes": 6485,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "5841cdfb846748a80d2feeb0d3dba8ac6198010bf67dd402b5f7104b71f64862",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/01_PASSBOOK_EVIDENCE/PASSBOOK_EVIDENCE_INVENTORY.xlsx",
+   "filename": "PASSBOOK_EVIDENCE_INVENTORY.xlsx",
+   "size_bytes": 6805,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "c9252da875f5024132a0a7a7fe6a963997f0c313d431c73d46faea61b9e2b3d2",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/01_PASSBOOK_EVIDENCE/passbook_inventory.json",
+   "filename": "passbook_inventory.json",
+   "size_bytes": 11451,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "84f1dc8df998807c3b7e1f973edebee1f630f8b9463899f3816322aa9a0eff40",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/00_CONTROL/Db2Accounting33.java",
+   "filename": "Db2Accounting33.java",
+   "size_bytes": 25928,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "4541ec0c81e28dd008ade0520ec264c86408dde03ce82aa059f65f82cc5546a5",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/00_CONTROL/Db2FullLoop.java",
+   "filename": "Db2FullLoop.java",
+   "size_bytes": 13225,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "234dce6c710b1fe0b45f065b77c866bdf5dc6d8be906ac89bc6949e65137ef0a",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/00_CONTROL/Db2PassbookFail.java",
+   "filename": "Db2PassbookFail.java",
+   "size_bytes": 4540,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "223704ed9f4d193acf559aa2601514f82e06caa40d0003ca3ef2526b21a5d38f",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/00_CONTROL/b006_compile.txt",
+   "filename": "b006_compile.txt",
+   "size_bytes": 0,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/02_D15_FIX/PASSBOOK_D15_FIX_PROOF.md",
+   "filename": "PASSBOOK_D15_FIX_PROOF.md",
+   "size_bytes": 5483,
+   "modified_utc": "2026-08-15T07:28:26Z",
+   "sha256": "efa4f5ec715ab0324763621687ec0ea4912bd69b65a5ab3b7a336218e29519a0",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/05_DEFECT/AUTO07_BUILD006_DEFECT_REGISTER.csv",
+   "filename": "AUTO07_BUILD006_DEFECT_REGISTER.csv",
+   "size_bytes": 1899,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "c9f5056215880b69989d810c059d251abd62e4f4c47b97688e4bf1bb6fa041ef",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING/05_DEFECT/AUTO07_BUILD006_DEFECT_REGISTER.xlsx",
+   "filename": "AUTO07_BUILD006_DEFECT_REGISTER.xlsx",
+   "size_bytes": 6299,
+   "modified_utc": "2026-08-15T07:27:50Z",
+   "sha256": "84a25f953dd8248d7d6fdbe2f963004e2d523f4b9b9559aff8fa46a58de6f6b2",
+   "source_session": "16_BUILD006_D15_PASSBOOK_FINAL_ACCOUNTING",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/06_FINAL_GATE/AUTO07_BUILD007_FINAL_GATE.md",
+   "filename": "AUTO07_BUILD007_FINAL_GATE.md",
+   "size_bytes": 4988,
+   "modified_utc": "2026-08-15T07:53:58Z",
+   "sha256": "d423c5fbd0f6513b82fb5e7bc0affe6111d18a98042e424645e12b93f6c743a2",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "gate",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/06_FINAL_GATE/BUILD007_MACHINE_READABLE_EVIDENCE.json",
+   "filename": "BUILD007_MACHINE_READABLE_EVIDENCE.json",
+   "size_bytes": 2092,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "e3f88b2c118a196e6b3916a471f63308344a3a0f665ec4165d7f3ff847ad4831",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "gate",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/01_GL_ID_EVIDENCE/D04_GL_ID_DB2_CATALOG_MATRIX.xlsx",
+   "filename": "D04_GL_ID_DB2_CATALOG_MATRIX.xlsx",
+   "size_bytes": 6311,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "c146013a5f4ffa012d7733f2d9b0d67038f75f6751aa595b17f45e6cd375a102",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/01_GL_ID_EVIDENCE/D04_GL_ID_REAL_SAMPLE.xlsx",
+   "filename": "D04_GL_ID_REAL_SAMPLE.xlsx",
+   "size_bytes": 6167,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "7b970d6db8bf057005e102474667db2a119e1bc10ad08256bd57f28d5cfcc491",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/01_GL_ID_EVIDENCE/glid_phys_before.txt",
+   "filename": "glid_phys_before.txt",
+   "size_bytes": 716,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "eda21fefdac2a560d4f68bf5be4fb4eda6720f5c2f34960abd3e4cc08a1aa485",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/03_TARGETED_TEST/D04_GL_ID_TARGETED_TEST_RESULTS.xlsx",
+   "filename": "D04_GL_ID_TARGETED_TEST_RESULTS.xlsx",
+   "size_bytes": 6474,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "fe53f18912dfc67617404e74c0b18961d196c5fad2d7375ba62858a120060725",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/03_TARGETED_TEST/glid_targeted.csv",
+   "filename": "glid_targeted.csv",
+   "size_bytes": 2150,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "aeaa94dc6fc405e1366a5ecb1d16304caae190481c52d9ae01a874dd5e98c8ac",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/03_TARGETED_TEST/glid_targeted.txt",
+   "filename": "glid_targeted.txt",
+   "size_bytes": 2618,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "540c7b44147bfc72ffa30a867f930c48d3129f790cf50481f7bd7a78b0e378cd",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/02_CONTRACT/D04_GL_ID_FIX_PROOF.md",
+   "filename": "D04_GL_ID_FIX_PROOF.md",
+   "size_bytes": 5023,
+   "modified_utc": "2026-08-15T07:53:27Z",
+   "sha256": "1df51b75c4479e95ffbc97122cf74a8cb4f3f7937b0d91ed5fc923b77d26c223",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/02_CONTRACT/GL_ID_CANONICAL_CONTRACT.md",
+   "filename": "GL_ID_CANONICAL_CONTRACT.md",
+   "size_bytes": 5606,
+   "modified_utc": "2026-08-15T07:52:57Z",
+   "sha256": "747ced31292252f1c3cc618c1e851f2c7027ffdfc10a7347ec58414e3e9ef42a",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/04_FINAL_REGRESSION/AUTO07_BUILD007_ACCOUNTING_RESULTS.xlsx",
+   "filename": "AUTO07_BUILD007_ACCOUNTING_RESULTS.xlsx",
+   "size_bytes": 8171,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "7e18886f203b4bcc697122b04b7ec93a9fac2e9873530d6f9198a89d3c63f015",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/04_FINAL_REGRESSION/AUTO07_BUILD007_FULL_LOOP_RESULTS.xlsx",
+   "filename": "AUTO07_BUILD007_FULL_LOOP_RESULTS.xlsx",
+   "size_bytes": 6150,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "e1c34157edc34889e2bf0e35333093e6d6e779d231aef50dd53bd9c3fe2f4c5b",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/04_FINAL_REGRESSION/AUTO07_BUILD007_GOLDEN_RESULTS.xlsx",
+   "filename": "AUTO07_BUILD007_GOLDEN_RESULTS.xlsx",
+   "size_bytes": 9445,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "3a984b3fb27571b8fa961a96f3845d71c6232e6ffe05340affa0bf41ff1d996b",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/04_FINAL_REGRESSION/Db2Accounting33_b007.txt",
+   "filename": "Db2Accounting33_b007.txt",
+   "size_bytes": 6750,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "018183cddbd1954f44ebe97393973365f5814983723a7edb0c62805af597caeb",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/04_FINAL_REGRESSION/Db2BankUnionProof_b007.txt",
+   "filename": "Db2BankUnionProof_b007.txt",
+   "size_bytes": 669,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "70d5784919d692a12fb8afc99200bfaf93b7cf2c8d4f654335de3c373ca96b77",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/04_FINAL_REGRESSION/Db2Build004Proof_b007.txt",
+   "filename": "Db2Build004Proof_b007.txt",
+   "size_bytes": 1046,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "b8eb74d25de7b962ea67df684565f1184df2b78f33969d757ab8065f3b5a5ff1",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/04_FINAL_REGRESSION/Db2Build005Proof_b007.txt",
+   "filename": "Db2Build005Proof_b007.txt",
+   "size_bytes": 611,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "a5b35bd488df261dca696d925c15e6a145d687681fc811c1c0bf9f9a8b4c6ebe",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/04_FINAL_REGRESSION/Db2FullLoop_b007.txt",
+   "filename": "Db2FullLoop_b007.txt",
+   "size_bytes": 2361,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "1b78bed0bd680ecd27b1d848d41de9edb9705f5344ec769c89f9499780d40604",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/04_FINAL_REGRESSION/Db2GlIdTargeted_b007.txt",
+   "filename": "Db2GlIdTargeted_b007.txt",
+   "size_bytes": 2618,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "540c7b44147bfc72ffa30a867f930c48d3129f790cf50481f7bd7a78b0e378cd",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/04_FINAL_REGRESSION/Db2LoopProof_b007.txt",
+   "filename": "Db2LoopProof_b007.txt",
+   "size_bytes": 993,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "4e2c2f0d1fb10f8455476151591e044d393750dea4e7a3338cfe2107520f7d00",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/04_FINAL_REGRESSION/Db2PassbookFail_b007.txt",
+   "filename": "Db2PassbookFail_b007.txt",
+   "size_bytes": 545,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "90e5078442b96a6cf731eac1ab8ed52cd76c14b58239eaf61e3cfd4719e22d47",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/04_FINAL_REGRESSION/all_summary.txt",
+   "filename": "all_summary.txt",
+   "size_bytes": 176,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "306f2f5df3670722450727ef77b5d3a57ce1e8ce0ff04b06fb0cd1a7e4d49300",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/04_FINAL_REGRESSION/golden33_summary.txt",
+   "filename": "golden33_summary.txt",
+   "size_bytes": 188,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "a7475c36a7fc202d89b50676eb5354ca0c32b87a179fc418924678c2e998b752",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/00_CONTROL/Db2GlIdTargeted.java",
+   "filename": "Db2GlIdTargeted.java",
+   "size_bytes": 13506,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "f2ac86e2c626809c19d2bba12479fe6f42ec8ae21d3b8fdf0c095796e0faae04",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/00_CONTROL/GlIdPhysProof.java",
+   "filename": "GlIdPhysProof.java",
+   "size_bytes": 2603,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "6afc54072b2bbc569467e492e5929a0e17b66ff0030b7486ecb544f0e59959aa",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/00_CONTROL/b007_compile.txt",
+   "filename": "b007_compile.txt",
+   "size_bytes": 0,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "control/harness",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/05_DEFECT/AUTO07_BUILD007_DEFECT_REGISTER.csv",
+   "filename": "AUTO07_BUILD007_DEFECT_REGISTER.csv",
+   "size_bytes": 847,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "221b0a0ffa6b960e7b2913b80eed8044229d8afcc0599d2e267cb0e902f5d072",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION/05_DEFECT/AUTO07_BUILD007_DEFECT_REGISTER.xlsx",
+   "filename": "AUTO07_BUILD007_DEFECT_REGISTER.xlsx",
+   "size_bytes": 5674,
+   "modified_utc": "2026-08-15T07:52:24Z",
+   "sha256": "50669a62ccd2a7e449a4bfaad9ea48b828c64b4a7a2bf7671d80e26c4015fff1",
+   "source_session": "17_BUILD007_D04_GL_ID_FINAL_REGRESSION",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "18_FINAL_GATE_001/02_DEFECT/AUTO07_FINAL_DEFECT_REGISTER.csv",
+   "filename": "AUTO07_FINAL_DEFECT_REGISTER.csv",
+   "size_bytes": 4619,
+   "modified_utc": "2026-08-15T08:06:55Z",
+   "sha256": "22922607cc49ae1082eecc2a845c3ec94c221b7ad709cbf43059e20d71f56410",
+   "source_session": "18_FINAL_GATE_001",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "18_FINAL_GATE_001/02_DEFECT/AUTO07_FINAL_DEFECT_REGISTER.xlsx",
+   "filename": "AUTO07_FINAL_DEFECT_REGISTER.xlsx",
+   "size_bytes": 8146,
+   "modified_utc": "2026-08-15T08:06:55Z",
+   "sha256": "63662c0a15ac05271be0cd7c2846bd8be4307a021ccd01654e14cd288bbe638a",
+   "source_session": "18_FINAL_GATE_001",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "18_FINAL_GATE_001/03_EQUIVALENCE/AUTO07_ORIGINAL_VS_V31_FINAL_EQUIVALENCE_MATRIX.xlsx",
+   "filename": "AUTO07_ORIGINAL_VS_V31_FINAL_EQUIVALENCE_MATRIX.xlsx",
+   "size_bytes": 7462,
+   "modified_utc": "2026-08-15T08:06:55Z",
+   "sha256": "8897b8654ea6de48e5a4384df9f5e4beed82f2d9b0502772936bdada85d3a3d5",
+   "source_session": "18_FINAL_GATE_001",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "18_FINAL_GATE_001/05_FULL_LOOP/AUTO07_FINAL_FULL_LOOP_REVIEW.xlsx",
+   "filename": "AUTO07_FINAL_FULL_LOOP_REVIEW.xlsx",
+   "size_bytes": 5768,
+   "modified_utc": "2026-08-15T08:06:55Z",
+   "sha256": "8d482224fba6020c889f8aa7c3dde678dbdd67026e011bf677541f8f93f96542",
+   "source_session": "18_FINAL_GATE_001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "18_FINAL_GATE_001/07_D19/D19_NON_GATING_DISPOSITION.md",
+   "filename": "D19_NON_GATING_DISPOSITION.md",
+   "size_bytes": 4116,
+   "modified_utc": "2026-08-15T08:07:44Z",
+   "sha256": "6ee3ed33dbe6fee0b2cc1c6272cdbfed55e939a634ce59c2ffe6ec76f148300f",
+   "source_session": "18_FINAL_GATE_001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "18_FINAL_GATE_001/01_RECONCILIATION/AUTO07_FINAL_GATE_EVIDENCE_INDEX.xlsx",
+   "filename": "AUTO07_FINAL_GATE_EVIDENCE_INDEX.xlsx",
+   "size_bytes": 15939,
+   "modified_utc": "2026-08-15T08:06:55Z",
+   "sha256": "34498749bdb67735cabb7dd89a4750ae0ab328e2b402364a981fb20c619eedbe",
+   "source_session": "18_FINAL_GATE_001",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "18_FINAL_GATE_001/01_RECONCILIATION/GL_ID_TARGETED_TEST_COUNT_RECONCILIATION.md",
+   "filename": "GL_ID_TARGETED_TEST_COUNT_RECONCILIATION.md",
+   "size_bytes": 2790,
+   "modified_utc": "2026-08-15T08:07:18Z",
+   "sha256": "0619c9d92776dc8ee74d26a38384b6e9bf32f5662fa2a4186f8ad0a70d91bfff",
+   "source_session": "18_FINAL_GATE_001",
+   "category": "evidence",
+   "frozen": true
+  },
+  {
+   "path": "18_FINAL_GATE_001/04_ACCOUNTING/AUTO07_FINAL_ACCOUNTING_RECONCILIATION.xlsx",
+   "filename": "AUTO07_FINAL_ACCOUNTING_RECONCILIATION.xlsx",
+   "size_bytes": 8595,
+   "modified_utc": "2026-08-15T08:06:55Z",
+   "sha256": "a79398ba488cd33793046035d235ae6090fb81fb454f3dff010cabfce15ad235",
+   "source_session": "18_FINAL_GATE_001",
+   "category": "results",
+   "frozen": true
+  },
+  {
+   "path": "18_FINAL_GATE_001/06_RECOVERY/AUTO07_FINAL_RECOVERY_PROOF.md",
+   "filename": "AUTO07_FINAL_RECOVERY_PROOF.md",
+   "size_bytes": 3835,
+   "modified_utc": "2026-08-15T08:08:07Z",
+   "sha256": "8d1150aad347a1a039ddd7f4ae25f261a12b3b2e14b1128786cc8891eabe5276",
+   "source_session": "18_FINAL_GATE_001",
+   "category": "gate",
+   "frozen": true
+  }
+ ]
+}

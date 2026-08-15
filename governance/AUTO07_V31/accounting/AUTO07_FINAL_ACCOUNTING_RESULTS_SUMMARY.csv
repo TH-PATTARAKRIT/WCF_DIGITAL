@@ -1,0 +1,35 @@
+﻿CASE_ID,EVENT,TITLE,RESULT,DIMENSIONS_VERIFIED,TOTALS_ONLY
+ACC-01,EV-01-S01,"own-office cash receipt: ROFF Dr 11100000 / Cr 11600000 1000.00, GL stamped, passbook 1000",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-02,EV-01-S02,"re-presenting the same receipt: no second document, no state change",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-03,EV-01-S03,"cancellation NOT approved: no posting, not an error",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-04,EV-01-S04,"zero/negative amount: SKIP, no posting",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-05,EV-01-S05,GL_ID=0 tombstone is re-selected and posted,PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-06,EV-01-S06,"two eligible receipts -> two documents, each its own GL",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-07,EV-01-S07,one eligible + one already posted: exactly one new document,PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-08,EV-02-S01,fine/fee stream: MAIN Dr 11100000/Cr 11600000 1000 AND FEE Dr 11100000/Cr 41200000 125.50 — D02,PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-09,EV-03-S01,"exceed money: EXC stream 30.00 to 42420000 from TENDER DETAIL sum (D13), passbook EXCEED_CREDIT 30",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-10,EV-03-S02,"exceed flag set but no tender detail: exceed amount is the tender SUM (0) — header value is a gate, not an amount",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-11,EV-04-S01,cross-office: TRRE at 1000 Dr 11440000/Cr 11410000 + RERE at owning 1002; TRRE report row stamped,PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-12,EV-04-S02,"office resolved via employer master = collecting office -> ROFF, no TRRE",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-13,EV-05-S01,branch-map office 1002 != collecting 1001 -> inter-office TRRE/RERE 700,PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-14,EV-05-S02,unknown employer -> COALESCE fallback to collecting branch -> own receipt ROFF 80,PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-15,EV-06-S01,C1 + APPROVED cancellation STILL POSTS 900 (GRO-15 ruling),PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-16,EV-06-S02,C1 unapproved: nothing,PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-16b,D08,C + approved MUST NOT post (rescue is C1-only),PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-17,EV-07-S01,"reconciled TR bank line: RERE pair posted, FIXED 1->2",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-18,EV-07-S02,"TT bank line (second table): SAME treatment, FIXED 1->2 on the TT table",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-19,EV-07-S03,"bank line FIXED=0 (not reconciled): skipped, stays 0",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-20,EV-07-S04,bank line already FIXED=2: skipped ALREADY_ACCOUNTED,PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-21,EV-08-S01,"bank line whose receipt does not exist: quarantined/skipped, not posted, not silent",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-22,EV-08-S02,"multi-invoice receipt: one document per mapping — 100 and 200, not 300 twice",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-23,EV-08-S03,cheque tender: PAY_TYPE=CHEQUE derived from cheque record (D07) — receipt posts,PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-24,EV-08-S04,type-5 receipt on the 42420000 profile: passbook reclassifies payment into EXCEED_CREDIT 75,PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-25,EV-08-S05,SSO '0000': accounting posts but passbook row is SKIPPED (CompanyPassbookModel:86),PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-26,EV-09-S01,"Dr=Cr per document AND per stream: MAIN 1000/1000, FEE 50/50 (balanced-but-wrong would still fail here)",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-27,EV-10-S01,receipt->ledger link written (T_LEDGER_MAP_RECEIPT) for the posted receipt,PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-28,EV-11-S01,"working-ledger rows carry the ORIGINAL per-side shape: ITEM_CODE ROFF, one D + one C",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-29,EV-12-S01,audit trail written for the run (RUN_START/RUN_END),PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-30,XC-S01,second run over the same estate: zero new rows (idempotency at accounting level),PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-31,XC-S02,run lock released after every run (no leaked lock),PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-32,XC-S03,"empty estate: SUCCESS_ZERO_INPUT, nothing written",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
+ACC-33,XC-S04,"amount precision preserved end-to-end: 999.99 on ledger AND passbook (DECIMAL(15,2), no rounding)",PASS,item/Dr acct/Dr amt/Cr acct/Cr amt/office/GL/passbook/TRRE as applicable,NO — per-value readback from DB2
